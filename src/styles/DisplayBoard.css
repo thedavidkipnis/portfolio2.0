@@ -1,6 +1,7 @@
 .displayboard-wrapper {
 
     box-sizing: border-box;
+    background-color: var(--main-color);
 
     height: 100vh;
     width: calc(100vw - 82px);
@@ -8,4 +9,10 @@
     padding-top: calc(82px + 41px);
     padding-left: 41px;
 
+    transition: background 0.2s, color 0.2s;
+}
+
+.typewriter-text {
+  white-space: nowrap;
+  overflow: hidden;
 }

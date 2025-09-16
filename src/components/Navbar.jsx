@@ -11,22 +11,26 @@ export default function Navbar() {
 
     return (
         <div className="navbar-wrapper">
-            <button className="navbar-darkmode-button"
-                onClick={() => setDarkMode(!darkMode)}
-            >
-                <div className="navbar-darkmode-button-image-wrapper">
-                    <img
-                        src="/lightmode2.png"
-                        alt="Light Mode"
-                        className={`image ${darkMode ? "visible" : "hidden"}`}
-                    />
-                    <img
-                        src="/darkmode2.png"
-                        alt="Dark Mode"
-                        className={`image ${darkMode ? "hidden" : "visible"}`}
-                    />
-                </div>
-            </button>
+            <div className="navbar-left">
+                <div className="navbar-styling-div"/>
+            </div>
+            <div className="navbar-right">
+                <button className="navbar-darkmode-button"
+                onClick={() => setDarkMode(!darkMode)}>
+                    <div className="navbar-darkmode-button-image-wrapper">
+                        <img
+                            src="/lightmode2.png"
+                            alt="Light Mode"
+                            className={`image ${darkMode ? "visible" : "hidden"}`}
+                        />
+                        <img
+                            src="/darkmode2.png"
+                            alt="Dark Mode"
+                            className={`image ${darkMode ? "hidden" : "visible"}`}
+                        />
+                    </div>
+                </button>
+            </div> 
         </div>
     )
 }
