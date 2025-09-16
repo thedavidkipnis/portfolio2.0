@@ -18,12 +18,12 @@ export default function Navbar() {
                 onClick={() => setDarkMode(!darkMode)}>
                     <div className="navbar-darkmode-button-image-wrapper">
                         <img
-                            src="/lightmode2.png"
+                            src="/lightmode.png"
                             alt="Light Mode"
                             className={`image ${darkMode ? "visible" : "hidden"}`}
                         />
                         <img
-                            src="/darkmode2.png"
+                            src="/darkmode.png"
                             alt="Dark Mode"
                             className={`image ${darkMode ? "hidden" : "visible"}`}
                         />

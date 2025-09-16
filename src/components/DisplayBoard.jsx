@@ -3,17 +3,26 @@ import '../styles/DisplayBoard.css'
 
 export default function DisplayBoard() {
 
-    const fullText = displayText("hi, im david.", 30);
-    const fullText2 = displayText("im a fullstack engineer - i build web apps.", 20);
-    const fullText3 = displayText("i love minialism (lol).", 25);
+    const fullTextBreak = displayText("===============", 50);
+    const introText1 = displayText("> hi, im david.");
+    const introText2 = displayText("> im a fullstack engineer - i build web apps.");
+
+    const educationText1 = displayText("> i studied computer science at Western Washington University.");
+    const educationText2 = displayText("> BS, Computer Science 2021 | MS, Computer Science 2022");
+
+    const workText1 = displayText("> currently i work at Infios (a supply chain software company).");
+    const workText2 = displayText("> i build and maintain warehouse management solutions & web applications for clients.");
 
     return (
         <div className="displayboard-wrapper">
-            {fullText}
-            <br/>
-            {fullText2}
-            <br/>
-            {fullText3}
+            {introText1}<br/>
+            {introText2}<br/><br/><br/>
+            {fullTextBreak}<br/><br/><br/>
+            {educationText1}<br/>
+            {educationText2}<br/><br/><br/>
+            {fullTextBreak}<br/><br/><br/>
+            {workText1}<br/>
+            {workText2}<br/><br/><br/>
         </div>
     )
 }
@@ -21,6 +30,10 @@ export default function DisplayBoard() {
 function displayText(text, typingSpeed) {
     const fullText = text;
     const [displayedText, setDisplayedText] = useState("");
+
+    if(!typingSpeed) {
+        typingSpeed = getRandomInt(10, 25) - (text.length / 25);
+    }
 
     useEffect(() => {
         let index = 0;
@@ -39,4 +52,10 @@ function displayText(text, typingSpeed) {
     }, []);
 
     return displayedText;
+}
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
