@@ -1,11 +1,7 @@
 .sidemenu-wrapper {
     height: 100vh;
     width: 80px;
-
+    
     border-right: 2px solid;
     border-color: var(--primary-color);
-
-    position: absolute;
-    left: 0;
-    top: 0;
 }

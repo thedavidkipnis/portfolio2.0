@@ -5,8 +5,7 @@
 
 body {
   margin: 0;
-  font-family: 'Manrope', sans-serif;
-  font-weight: 600;
+  font-family: "Red Hat Mono", monospace;
 
   background: var(--main-color);
   color: var(--secondary-color);
@@ -19,7 +18,11 @@ body {
   --secondary-color: #fff;
 }
 
-.main-wrapper {
+.top-wrapper {
+  display: flex;
+}
+
+.contents-wrapper {
   display: flex;
 }
 

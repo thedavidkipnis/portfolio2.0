@@ -1,0 +1,11 @@
+.displayboard-wrapper {
+
+    box-sizing: border-box;
+
+    height: 100vh;
+    width: calc(100vw - 82px);
+
+    padding-top: calc(82px + 41px);
+    padding-left: 41px;
+
+}

@@ -1,6 +1,7 @@
 import { useState, useEffect  } from 'react'
 import Navbar from './components/Navbar';
 import SideMenu from './components/SideMenu';
+import DisplayBoard from './components/DisplayBoard';
 
 export default function App() {
 
@@ -11,9 +12,12 @@ export default function App() {
   }, [darkMode]);
 
   return (
-    <div className="main-wrapper">
+    <div className="top-wrapper">
       <Navbar/>
-      <SideMenu/>
+      <div className="contents-wrapper">
+        <SideMenu/>
+        <DisplayBoard/>
+      </div>
     </div>
   )
 }
