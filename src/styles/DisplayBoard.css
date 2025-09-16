@@ -1,15 +1,18 @@
 .displayboard-wrapper {
 
+    flex-grow: 1;
+    overflow-x: auto;
+    
     box-sizing: border-box;
     background-color: var(--main-color);
 
     height: 100vh;
     width: calc(100vw - 82px);
 
-    padding-top: calc(82px + 41px);
-    padding-left: 41px;
+    padding-top: calc(80px + 40px);
+    padding-left: 40px;
 
-    transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s, width 0.3s ease;
 }
 
 .typewriter-text {

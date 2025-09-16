@@ -12,7 +12,6 @@ export default function Navbar() {
     return (
         <div className="navbar-wrapper">
             <div className="navbar-left">
-                <div className="navbar-styling-div"/>
             </div>
             <div className="navbar-right">
                 <button className="navbar-darkmode-button"

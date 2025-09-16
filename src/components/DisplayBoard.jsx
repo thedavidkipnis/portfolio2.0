@@ -3,14 +3,24 @@ import '../styles/DisplayBoard.css'
 
 export default function DisplayBoard() {
 
-    const fullText = "hi, im david.";
+    const fullText = displayText("hi, im david.", 30);
+    const fullText2 = displayText("im a fullstack engineer - i build web apps.", 20);
+    const fullText3 = displayText("i love minialism (lol).", 25);
+
+    return (
+        <div className="displayboard-wrapper">
+            {fullText}
+            <br/>
+            {fullText2}
+            <br/>
+            {fullText3}
+        </div>
+    )
+}
+
+function displayText(text, typingSpeed) {
+    const fullText = text;
     const [displayedText, setDisplayedText] = useState("");
-
-    const fullText2 = "im a fullstack engineer - i build web apps.";
-    const [displayedText2, setDisplayedText2] = useState("");
-
-    const fullText3 = "i love minialism (lol).";
-    const [displayedText3, setDisplayedText3] = useState("");
 
     useEffect(() => {
         let index = 0;
@@ -23,48 +33,10 @@ export default function DisplayBoard() {
         } else {
             clearInterval(interval);
         }
-        }, 45);
+        }, typingSpeed);
 
         return () => clearInterval(interval);
     }, []);
 
-    useEffect(() => {
-        let index = 0;
-        let curText = "";
-        const interval = setInterval(() => {
-        if (index < fullText2.length) {
-            curText += fullText2[index];
-            setDisplayedText2(curText);
-            index++;
-        } else {
-            clearInterval(interval);
-        }
-        }, 20);
-
-        return () => clearInterval(interval);
-    }, []);
-
-    useEffect(() => {
-        let index = 0;
-        let curText = "";
-        const interval = setInterval(() => {
-        if (index < fullText3.length) {
-            curText += fullText3[index];
-            setDisplayedText3(curText);
-            index++;
-        } else {
-            clearInterval(interval);
-        }
-        }, 30);
-
-        return () => clearInterval(interval);
-    }, []);
-
-    return (
-        <div className="displayboard-wrapper">
-            <p className="typewriter-text">{displayedText}</p>
-            <p className="typewriter-text">{displayedText2}</p>
-            <p className="typewriter-text">{displayedText3}</p>
-        </div>
-    )
+    return displayedText;
 }
