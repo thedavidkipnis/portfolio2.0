@@ -19,3 +19,7 @@ body {
   --secondary-color: #fff;
 }
 
+.main-wrapper {
+  display: flex;
+}
+

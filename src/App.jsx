@@ -1,5 +1,6 @@
 import { useState, useEffect  } from 'react'
 import Navbar from './components/Navbar';
+import SideMenu from './components/SideMenu';
 
 export default function App() {
 
@@ -12,6 +13,7 @@ export default function App() {
   return (
     <div className="main-wrapper">
       <Navbar/>
+      <SideMenu/>
     </div>
   )
 }

@@ -1,5 +1,6 @@
 .navbar-wrapper {
     height: 80px;
+    width: 100vw;
 
     border-bottom: 2px solid;
     border-color: var(--primary-color);
