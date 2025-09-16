@@ -2,11 +2,59 @@
     height: 80px;
     width: 100vw;
 
+    box-sizing: border-box;
+
     border-bottom: 2px solid;
-    border-color: var(--primary-color);
+    border-color: var(--secondary-color);
 
     position: absolute;
     left: 0;
     top: 0;
     z-index: 100;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    transition: border-color 0.6s ease-in-out; 
+}
+
+.navbar-darkmode-button {
+    background: none;
+    border: none;
+
+}
+
+.navbar-darkmode-button-image-wrapper {
+    position: relative;
+    width: 60px;
+    height: 60px;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--secondary-color);
+    transition: border-color 0.3s ease-in-out; 
+
+    cursor: pointer;
+}
+
+.navbar-darkmode-button-image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: opacity 0.3s;
+}
+
+.image.visible {
+  opacity: 1;
+  z-index: 2;
+}
+
+.image.hidden {
+  opacity: 0;
+  z-index: 1;
 }
