@@ -17,13 +17,44 @@ export default function SideMenu() {
           onClick={toggleMenu}
         />
       </div>
-        <div className="sidemenu-items" style={{opacity: isOpen ? 1 : 0, pointerEvents: isOpen ? "auto" : "none"}}>
-          <div className="sidemenu-item">about me</div>
-          <br />
-          <div className="sidemenu-item">my projects</div>
-          <br />
-          <div className="sidemenu-item">my resume</div>
+      <div
+        className="sidemenu-items"
+        style={{
+          opacity: isOpen ? 1 : 0,
+          pointerEvents: isOpen ? "auto" : "none",
+        }}
+      >
+        <div className="sidemenu-item">about me</div>
+        <br />
+        <div className="sidemenu-item">my projects</div>
+        <br />
+        <div className="sidemenu-item">my resume</div>
+        <br />
+        <br />
+        <div className="sidemenu-filler">==========</div>
+        <br />
+        <br />
+        <div className="sidemenu-link">
+          <a
+            href="https://www.linkedin.com/in/thedavidkipnis/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
         </div>
+        <br />
+        <div className="sidemenu-link">
+          <a
+            href="https://github.com/thedavidkipnis"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
+        <br />
+      </div>
     </div>
   );
 }

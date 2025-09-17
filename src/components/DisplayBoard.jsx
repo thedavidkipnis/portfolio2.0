@@ -5,7 +5,7 @@ export default function DisplayBoard() {
   const fullTextBreak = displayText("===============", 50);
   const introText1 = displayText("> hi, im david.");
   const introText2 = displayText(
-    "> im a fullstack engineer - i build web apps.",
+    "> im a fullstack engineer - i mostly build web apps.",
   );
 
   const educationText1 = displayText(
