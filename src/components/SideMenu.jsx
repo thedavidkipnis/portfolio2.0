@@ -19,9 +19,9 @@ export default function SideMenu() {
         </div>
         {isOpen && (
             <div className="sidemenu-items">
-            <div>My Education</div>
-            <div>My Projects</div>
-            <div>My Experience</div>
+                <div className='sidemenu-item'>My Education</div><br/>
+                <div className='sidemenu-item'>My Projects</div><br/>
+                <div className='sidemenu-item'>My Experience</div>
             </div>
         )}
         </div>
