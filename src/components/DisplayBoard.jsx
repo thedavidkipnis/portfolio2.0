@@ -1,4 +1,5 @@
 import { useState, useEffect  } from 'react'
+import { useTheme } from "../context/ThemeContext"
 import '../styles/DisplayBoard.css'
 
 export default function DisplayBoard() {
@@ -8,7 +9,9 @@ export default function DisplayBoard() {
     const introText2 = displayText("> im a fullstack engineer - i build web apps.");
 
     const educationText1 = displayText("> i studied computer science at Western Washington University.");
-    const educationText2 = displayText("> BS, Computer Science 2021 | MS, Computer Science 2022");
+    const educationText2 = displayText("---> (Bachelor of Science, Computer Science 2021)");
+    const educationText3 = displayText("---> (Master of Science, Computer Science 2022)");
+    const educationText4 = displayText("> My graduate research on AI has been published by IEEE and can be found here.");
 
     const workText1 = displayText("> currently i work at Infios (a supply chain software company).");
     const workText2 = displayText("> i build and maintain warehouse management solutions & web applications for clients.");
@@ -19,7 +22,9 @@ export default function DisplayBoard() {
             {introText2}<br/><br/><br/>
             {fullTextBreak}<br/><br/><br/>
             {educationText1}<br/>
-            {educationText2}<br/><br/><br/>
+            {educationText2}<br/>
+            {educationText3}<br/>
+            {educationText4}<br/><br/><br/>
             {fullTextBreak}<br/><br/><br/>
             {workText1}<br/>
             {workText2}<br/><br/><br/>

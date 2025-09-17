@@ -60,6 +60,10 @@
     cursor: pointer;
 }
 
+.navbar-darkmode-button-image-wrapper:hover {
+  border-color: var(--accent-color);
+}
+
 .navbar-darkmode-button-image-wrapper img {
   position: absolute;
   top: 0;
@@ -67,8 +71,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-
-  transition: opacity 0.3s;
 }
 
 .image.visible {

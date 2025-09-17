@@ -1,18 +1,14 @@
 import { useState, useEffect  } from 'react'
+import { useTheme } from "../context/ThemeContext"
 import '../styles/Navbar.css'
 
 export default function Navbar() {
 
-    const [darkMode, setDarkMode] = useState(true);
-    
-    useEffect(() => {
-    document.body.classList.toggle("dark-mode", darkMode);
-    }, [darkMode]);
+    const { darkMode, setDarkMode } = useTheme();
 
     return (
         <div className="navbar-wrapper">
-            <div className="navbar-left">
-            </div>
+            <div className="navbar-left"></div>
             <div className="navbar-right">
                 <button className="navbar-darkmode-button"
                 onClick={() => setDarkMode(!darkMode)}>
