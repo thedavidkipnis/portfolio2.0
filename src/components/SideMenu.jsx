@@ -17,15 +17,13 @@ export default function SideMenu() {
           onClick={toggleMenu}
         />
       </div>
-      {isOpen && (
-        <div className="sidemenu-items">
-          <div className="sidemenu-item">My Education</div>
+        <div className="sidemenu-items" style={{opacity: isOpen ? 1 : 0, pointerEvents: isOpen ? "auto" : "none"}}>
+          <div className="sidemenu-item">about me</div>
           <br />
-          <div className="sidemenu-item">My Projects</div>
+          <div className="sidemenu-item">my projects</div>
           <br />
-          <div className="sidemenu-item">My Experience</div>
+          <div className="sidemenu-item">my resume</div>
         </div>
-      )}
     </div>
   );
 }
