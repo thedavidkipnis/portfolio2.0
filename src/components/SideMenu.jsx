@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
+import { useContent } from "../context/ContentProvider";
 import "../styles/SideMenu.css";
 
 export default function SideMenu() {
+
   const { darkMode } = useTheme();
+  const { contentTitle, setContentTitle} = useContent();
+
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -24,11 +28,11 @@ export default function SideMenu() {
           pointerEvents: isOpen ? "auto" : "none",
         }}
       >
-        <div className="sidemenu-item">about me</div>
+        <div className="sidemenu-item" onClick={() => {setContentTitle("about_me.txt"); setIsOpen(!isOpen)}}>about me</div>
         <br />
-        <div className="sidemenu-item">my projects</div>
+        <div className="sidemenu-item" onClick={() => {setContentTitle("my_projects.txt"); setIsOpen(!isOpen)}}>my projects</div>
         <br />
-        <div className="sidemenu-item">my resume</div>
+        <div className="sidemenu-item" onClick={() => {setContentTitle("my_resume.txt"); setIsOpen(!isOpen)}}>my resume</div>
         <br />
         <br />
         <div className="sidemenu-filler">==========</div>
