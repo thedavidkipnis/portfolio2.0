@@ -1,17 +1,15 @@
-import { useState, useEffect  } from 'react'
-import Navbar from './components/Navbar';
-import SideMenu from './components/SideMenu';
-import DisplayBoard from './components/DisplayBoard';
+import Navbar from "./components/Navbar";
+import SideMenu from "./components/SideMenu";
+import DisplayBoard from "./components/DisplayBoard";
 
 export default function App() {
-
   return (
     <div className="top-wrapper">
-      <Navbar/>
+      <Navbar />
       <div className="contents-wrapper">
-        <SideMenu/>
-        <DisplayBoard/>
+        <SideMenu />
+        <DisplayBoard />
       </div>
     </div>
-  )
+  );
 }
