@@ -1,12 +1,19 @@
+import { useState, useEffect } from "react";
 import { useTheme } from "../context/ThemeContext";
+import TypewriterText from "./TypewriterText";
 import "../styles/Navbar.css";
 
 export default function Navbar() {
+
+  const charSelection = ["#","*","&","$","/","|","%","!","@","(",")"];
+
   const { darkMode, setDarkMode } = useTheme();
 
   return (
     <div className="navbar-wrapper">
-      <div className="navbar-left"></div>
+      <div className="navbar-left">
+        <TypewriterText text={"about_me.txt"}/>
+      </div>
       <div className="navbar-right">
         <button
           className="navbar-darkmode-button"
