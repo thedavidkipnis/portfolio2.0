@@ -33,7 +33,7 @@
 
   box-sizing: border-box;
 
-  padding-right: 12px;
+  padding-right: 18px;
 
   width: 50%;
   display: flex;
@@ -49,8 +49,8 @@
 
 .navbar-darkmode-button-image-wrapper {
     position: relative;
-    width: 55px;
-    height: 55px;
+    width: 40px;
+    height: 40px;
 
     border-style: solid;
     border-width: 2px;
@@ -58,10 +58,6 @@
     transition: border-color 0.3s ease-in-out; 
 
     cursor: pointer;
-}
-
-.navbar-darkmode-button-image-wrapper:hover {
-  border-color: var(--accent-color);
 }
 
 .navbar-darkmode-button-image-wrapper img {
