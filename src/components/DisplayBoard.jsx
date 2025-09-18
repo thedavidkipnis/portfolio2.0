@@ -3,9 +3,9 @@ import TypewriterText from "./TypewriterText";
 import "../styles/DisplayBoard.css";
 
 export default function DisplayBoard() {
-  const [word, setWord] = useState("...");
-  const [partOfSpeech, setPartOfSpeech] = useState("...");
-  const [wordDef, setWordDef] = useState("...");
+  const [word, setWord] = useState("> Searching for new word...");
+  const [partOfSpeech, setPartOfSpeech] = useState("");
+  const [wordDef, setWordDef] = useState("");
 
   const textArray = [
     "> hi, im david.",
@@ -31,15 +31,17 @@ export default function DisplayBoard() {
         const wordDefData = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word[0]}`);
         const wordDefinition = await wordDefData.json();
 
-        setWord(word[0]);
-        setPartOfSpeech(wordDefinition[0].meanings[0].partOfSpeech);
-        setWordDef(wordDefinition[0].meanings[0].definitions[0]?.definition.toLocaleLowerCase());
+        console.log(wordDefinition[0].meanings[0].definitions);
+
+        setWord("> " + word[0]);
+        setPartOfSpeech(" : " + wordDefinition[0].meanings[0].partOfSpeech);
+        setWordDef("> " + wordDefinition[0].meanings[0].definitions[0]?.definition.toLocaleLowerCase());
 
       } catch (error) {
         console.error("Error fetching word:", error);
-        setWord("???");
-        setPartOfSpeech("???");
-        setWordDef("???");
+        setWord("> Searching for new word...");
+        setPartOfSpeech("");
+        setWordDef("");
       }
     }
 
@@ -59,8 +61,8 @@ export default function DisplayBoard() {
       ))}
 
       <div className="displayboard-wordoftheday-wrapper">
-        <TypewriterText text={`> ${word} : ${partOfSpeech}`} />
-        <TypewriterText text={"> " + wordDef} />
+        <TypewriterText text={`${word}${partOfSpeech}`} />
+        <TypewriterText text={wordDef} />
       </div>
     </div>
   );
