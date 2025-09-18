@@ -1,0 +1,19 @@
+.projectboard-wrapper {
+
+    flex-grow: 1;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: var(--main-color);
+
+    height: 100vh;
+    width: calc(100vw - 82px);
+
+    padding-top: calc(80px + 40px);
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+
+    transition: background 0.2s, color 0.2s, width 0.3s ease;
+}

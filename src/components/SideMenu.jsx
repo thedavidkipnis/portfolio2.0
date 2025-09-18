@@ -5,7 +5,7 @@ import "../styles/SideMenu.css";
 
 export default function SideMenu() {
   const { darkMode } = useTheme();
-  const { setContentTitle } = useContent();
+  const { setDisplayedContentFlag } = useContent();
 
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -30,7 +30,7 @@ export default function SideMenu() {
         <div
           className="sidemenu-item"
           onClick={() => {
-            setContentTitle("about_me.txt");
+            setDisplayedContentFlag("DisplayBoard");
             setIsOpen(!isOpen);
           }}
         >
@@ -40,7 +40,7 @@ export default function SideMenu() {
         <div
           className="sidemenu-item"
           onClick={() => {
-            setContentTitle("my_projects.txt");
+            setDisplayedContentFlag("ProjectBoard");
             setIsOpen(!isOpen);
           }}
         >
@@ -50,7 +50,7 @@ export default function SideMenu() {
         <div
           className="sidemenu-item"
           onClick={() => {
-            setContentTitle("my_resume.txt");
+            setDisplayedContentFlag("ResumeBoard");
             setIsOpen(!isOpen);
           }}
         >

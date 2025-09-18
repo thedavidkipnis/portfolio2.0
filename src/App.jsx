@@ -1,14 +1,16 @@
 import Navbar from "./components/Navbar";
 import SideMenu from "./components/SideMenu";
-import DisplayBoard from "./components/DisplayBoard";
+import { useContent } from "./context/ContentProvider";
 
 export default function App() {
+  const { displayedContent } = useContent();
+
   return (
     <div className="top-wrapper">
       <Navbar />
       <div className="contents-wrapper">
         <SideMenu />
-        <DisplayBoard />
+        {displayedContent}
       </div>
     </div>
   );
