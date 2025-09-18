@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 export default function TypewriterText({ text, typingSpeed }) {
   const [displayedText, setDisplayedText] = useState("");
@@ -18,5 +19,15 @@ export default function TypewriterText({ text, typingSpeed }) {
     return () => clearInterval(interval);
   }, [text, typingSpeed]);
 
-  return (<span>{displayedText}<br/></span>);
+  return (
+    <span>
+      {displayedText}
+      <br />
+    </span>
+  );
 }
+
+TypewriterText.propTypes = {
+  text: PropTypes.string.isRequired,
+  typingSpeed: PropTypes.number,
+};

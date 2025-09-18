@@ -1,20 +1,18 @@
-import { useState, useEffect } from "react";
 import { useTheme } from "../context/ThemeContext";
 import { useContent } from "../context/ContentProvider";
 import TypewriterText from "./TypewriterText";
 import "../styles/Navbar.css";
 
 export default function Navbar() {
-
-  const charSelection = ["#","*","&","$","/","|","%","!","@","(",")"];
+  // const charSelection = ["#", "*", "&", "$", "/", "|", "%", "!", "@", "(", ")"];
 
   const { darkMode, setDarkMode } = useTheme();
-  const { contentTitle, setContentTitle} = useContent();
+  const { contentTitle } = useContent();
 
   return (
     <div className="navbar-wrapper">
       <div className="navbar-left">
-        <TypewriterText text={contentTitle}/>
+        <TypewriterText text={contentTitle} />
       </div>
       <div className="navbar-right">
         <button
