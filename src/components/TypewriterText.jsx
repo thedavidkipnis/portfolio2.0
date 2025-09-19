@@ -5,7 +5,7 @@ export default function TypewriterText({ text, typingSpeed }) {
   const [displayedText, setDisplayedText] = useState("");
 
   if (!typingSpeed) {
-    typingSpeed = Math.max(10, 25 - text.length / 25);
+    typingSpeed = Math.min(10, 25 - text.length / 25);
   }
 
   useEffect(() => {

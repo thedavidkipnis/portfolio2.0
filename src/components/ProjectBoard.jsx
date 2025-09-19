@@ -7,14 +7,14 @@ export default function ProjectBoard() {
     const projects = [
         [
             "tondo",
-            "React (JS), Firebase, Node.js tooling",
+            "React (JS), Firebase, Node.js",
             "Web application that acts as a board of sticky notes for writing down your ideas or todo's", 
             "https://thedavidkipnis.github.io/Tondo/",
             "https://github.com/thedavidkipnis/Tondo"
         ],
         [
             "alchemystic", 
-            "React (JS), Firebase, Node.js tooling", 
+            "React (JS), Firebase, Node.js", 
             "Web platform for connecting clients, practitioners, and providers in the physical therapy space", 
             "https://thedavidkipnis.github.io/alchemystic-platform/",
             "https://github.com/thedavidkipnis/alchemystic-platform"
@@ -36,7 +36,7 @@ export default function ProjectBoard() {
                     <h2 className="projectboard-box-title">
                         {project[0]}
                     </h2>
-                    {"=>" + project[1]}<br/><br/>
+                    {"> " + project[1]}<br/><br/>
                     {project[2]}
                     </div>
                     <div className="projectboard-footer">

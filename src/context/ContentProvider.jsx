@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import DisplayBoard from "../components/DisplayBoard";
 import ProjectBoard from "../components/ProjectBoard";
+import ResumeBoard from "../components/ResumeBoard";
 
 const ContentContext = createContext();
 
@@ -23,8 +24,8 @@ export function ContentProvider({ children }) {
         setDisplayedContent(<ProjectBoard />);
         break;
       case "ResumeBoard":
-        setContentTitle("my_projects.txt");
-        setDisplayedContent(<ProjectBoard />);
+        setContentTitle("resume.txt");
+        setDisplayedContent(<ResumeBoard />);
         break;
     }
   }, [displayedContentFlag]);

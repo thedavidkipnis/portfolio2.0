@@ -8,7 +8,7 @@ export default function DisplayBoard() {
   const [wordDef, setWordDef] = useState("");
 
   const textArray = [
-    "> hi, im david.",
+    "> hi, im david kipnis.",
     "> im a fullstack engineer - i mostly build web apps.",
     "===============",
     "> i studied computer science at Western Washington University.",

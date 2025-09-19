@@ -1,9 +1,9 @@
 .projectboard-wrapper::-webkit-scrollbar {
-  width: 8px; /* thickness */
+  width: 8px; 
 }
 
 .projectboard-wrapper::-webkit-scrollbar-track {
-  background: transparent; /* background behind scrollbar */
+  background: transparent;
 }
 
 .projectboard-wrapper::-webkit-scrollbar-thumb {
@@ -16,7 +16,7 @@
 
 /* Firefox */
 .projectboard-wrapper {
-  scrollbar-width: thin; /* "auto" | "thin" */
+  scrollbar-width: thin;
   scrollbar-color: var(--secondary-color, #999) transparent;
 }
 

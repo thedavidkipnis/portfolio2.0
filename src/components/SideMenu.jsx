@@ -40,21 +40,21 @@ export default function SideMenu() {
         <div
           className="sidemenu-item"
           onClick={() => {
-            setDisplayedContentFlag("ProjectBoard");
-            setIsOpen(!isOpen);
-          }}
-        >
-          my projects
-        </div>
-        <br />
-        <div
-          className="sidemenu-item"
-          onClick={() => {
             setDisplayedContentFlag("ResumeBoard");
             setIsOpen(!isOpen);
           }}
         >
           my resume
+        </div>
+        <br />
+        <div
+          className="sidemenu-item"
+          onClick={() => {
+            setDisplayedContentFlag("ProjectBoard");
+            setIsOpen(!isOpen);
+          }}
+        >
+          my projects
         </div>
         <br />
         <br />
