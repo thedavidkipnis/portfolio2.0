@@ -58,7 +58,9 @@ export default function DisplayBoard() {
 
   return (
     <div className="displayboard-wrapper">
-      <h1 className="displayboard-header"><TypewriterText text={"hi, i'm david kipnis."}/></h1>
+      <h1 className="displayboard-header">
+        <TypewriterText text={"hi, i'm david kipnis."} />
+      </h1>
       {textArray.map((text, index) =>
         text.includes("=") ? (
           <div key={index}>
