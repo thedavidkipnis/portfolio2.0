@@ -8,7 +8,6 @@ export default function DisplayBoard() {
   const [wordDef, setWordDef] = useState("");
 
   const textArray = [
-    "> hi, im david kipnis.",
     "> im a fullstack engineer - i mostly build web apps.",
     "===============",
     "> i studied computer science at Western Washington University.",
@@ -59,6 +58,7 @@ export default function DisplayBoard() {
 
   return (
     <div className="displayboard-wrapper">
+      <h1 className="displayboard-header"><TypewriterText text={"hi, i'm david kipnis."}/></h1>
       {textArray.map((text, index) =>
         text.includes("=") ? (
           <div key={index}>

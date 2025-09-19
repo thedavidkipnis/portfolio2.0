@@ -1,5 +1,13 @@
+.resumeboard-wrapper {
+  overflow-y: auto;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: var(--secondary-color, #999) transparent;
+}
+
+/* Webkit browsers */
 .resumeboard-wrapper::-webkit-scrollbar {
-  width: 8px; 
+  width: 8px;
+  height: 8px; 
 }
 
 .resumeboard-wrapper::-webkit-scrollbar-track {
@@ -8,16 +16,16 @@
 
 .resumeboard-wrapper::-webkit-scrollbar-thumb {
   background-color: var(--secondary-color, #999);
+  border-radius: 0;  
+  border: none; 
 }
 
 .resumeboard-wrapper::-webkit-scrollbar-thumb:hover {
   background-color: var(--accent-color, #666);
 }
 
-/* Firefox */
-.resumeboard-wrapper {
-  scrollbar-width: thin;
-  scrollbar-color: var(--secondary-color, #999) transparent;
+.resumeboard-wrapper::-webkit-scrollbar-button {
+  display: none;
 }
 
 .resumeboard-wrapper {
@@ -39,4 +47,72 @@
     padding-bottom: 40px;
 
     transition: background 0.2s, color 0.2s, width 0.3s ease;
+}
+
+.resumeboard-experience-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.experience-section {
+  border-left: 2px solid var(--secondary-color);
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+
+  transition: border-color 0.6s ease-in-out;
+}
+
+.experience-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.experience-company {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.experience-duration {
+  font-size: 1rem;
+  color: var(--secondary-color);
+
+  transition: color 0.2s;
+}
+
+.experience-position {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.experience-prompts {
+  margin-top: 5px;
+  padding-left: 20px;
+}
+
+.experience-prompt {
+  margin-bottom: 3px;
+  font-size: 1rem;
+}
+
+.experience-link {
+  margin-top: 15px;
+}
+
+.experience-link a {
+  color: var(--accent-color, #666);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.experience-link a:hover {
+  color: var(--secondary-color, #999);
 }

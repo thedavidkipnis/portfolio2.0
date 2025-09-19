@@ -18,6 +18,10 @@
     transition: background 0.2s, color 0.2s, width 0.3s ease;
 }
 
+.displayboard-header {
+  margin: 0 0 15px 0;
+}
+
 .displayboard-wordoftheday-wrapper {
 
   box-sizing: border-box;
