@@ -20,7 +20,7 @@ export default function ProjectBoard() {
       "game-of-life",
       "JavaScript, HTML/CSS",
       "My take on Conway's game-of-life",
-      "thedavidkipnis.github.io/game-of-life/",
+      "https://thedavidkipnis.github.io/game-of-life/",
       "https://github.com/thedavidkipnis/game-of-life",
     ],
   ];
