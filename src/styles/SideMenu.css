@@ -52,10 +52,9 @@
 }
 
 /* mobile */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .sidemenu-wrapper {
     width: 0;
-    border-right: none;
     position: fixed;
     left: 0;
     top: 0;
@@ -63,7 +62,7 @@
     z-index: 200;
     background-color: var(--main-color);
     overflow: hidden;
-    border-right: 0px solid var(--secondary-color);
+    border-right: 0 solid var(--secondary-color);
     transition: width 0.3s ease, border 0.3s;
   }
 
@@ -76,8 +75,8 @@
     width: 78px;
     height: 80px;
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     z-index: 300;
     border-bottom: none;
   }

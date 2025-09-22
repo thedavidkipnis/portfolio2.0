@@ -14,7 +14,11 @@ export default function SideMenu() {
     <div className={`sidemenu-wrapper ${isOpen ? "open" : "closed"}`}>
       <div className={`sidemenu-button-wrapper ${isOpen ? "open" : "closed"}`}>
         <img
-          src={darkMode ? "/portfolio2.0/arrow_dark.png" : "/portfolio2.0/arrow_light.png"}
+          src={
+            darkMode
+              ? "/portfolio2.0/arrow_dark.png"
+              : "/portfolio2.0/arrow_light.png"
+          }
           alt="Toggle Menu"
           className={`sidemenu-toggle-arrow ${isOpen ? "open" : "closed"}`}
           onClick={toggleMenu}
