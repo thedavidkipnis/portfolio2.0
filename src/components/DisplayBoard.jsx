@@ -8,12 +8,12 @@ export default function DisplayBoard() {
   const [wordDef, setWordDef] = useState("");
 
   const textArray = [
-    "> im a fullstack engineer - i mostly build web apps.",
+    "> im a fullstack engineer.",
+    "> i mostly build web apps and automate database processes.",
     "===============",
     "> i studied computer science at Western Washington University.",
     "---> (Bachelor of Science, Computer Science 2021)",
     "---> (Master of Science, Computer Science 2022)",
-    "> My graduate research on AI has been published by IEEE and can be found here.",
     "===============",
     "> currently i work at Infios (a supply chain software company).",
     "> i build and maintain warehouse management solutions & web applications for clients.",
