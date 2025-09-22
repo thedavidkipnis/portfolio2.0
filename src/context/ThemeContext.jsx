@@ -6,8 +6,17 @@ const ThemeContext = createContext();
 export function ThemeProvider({ children }) {
   const [darkMode, setDarkMode] = useState(() => {
     const stored = localStorage.getItem("darkMode");
-    return stored !== null ? JSON.parse(stored) : true;
+    if (stored !== null) {
+      try {
+        return JSON.parse(stored);
+      } catch {
+        // fallback if invalid JSON
+        return true;
+      }
+    }
+    return true;
   });
+
 
   // Keep your <body> class toggling here
   useEffect(() => {
