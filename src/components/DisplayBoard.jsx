@@ -34,8 +34,6 @@ export default function DisplayBoard() {
         );
         const wordDefinition = await wordDefData.json();
 
-        console.log(wordDefinition[0].meanings[0].definitions);
-
         setWord("> " + word[0]);
         setPartOfSpeech(" : " + wordDefinition[0].meanings[0].partOfSpeech);
         setWordDef(
