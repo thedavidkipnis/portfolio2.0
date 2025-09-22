@@ -21,31 +21,22 @@
 }
 
 .projectboard-wrapper {
-
     flex-grow: 1;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden auto;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     background-color: var(--main-color);
-
     height: 100vh;
     width: calc(100vw - 82px);
-
-    padding-top: calc(80px + 40px);
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 40px;
-
+    padding: calc(80px + 40px) 40px 40px;
     transition: background 0.2s, color 0.2s, width 0.3s ease;
 }
 
 .projectboard-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-  row-gap: 40px;
-  column-gap: 40px;
+  gap: 40px;
 }
 
 .projectboard-grid a {

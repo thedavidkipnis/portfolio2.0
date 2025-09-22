@@ -35,6 +35,8 @@ module.exports = defineConfig([
       },
     },
 
+    ignores: ["node_modules", "dist", "build", ".next", "dist/assets/*.js"],
+
     plugins: {
       react,
       prettier,
