@@ -8,6 +8,7 @@ export default function ResumeBoard() {
     "> +1 (206) 371 3658",
     "=== BIO ===",
     "> full-stack software engineer with 2+ years of experience developing database solutions and web applications.",
+    "> focus on automation and process optimization.",
     "> passionate about machine learning/ai, mobile computing, and game development. ",
     "=== MY TECH ===",
     "> languages: JavaScript, Python, SQL (TSQL), C++",

@@ -57,6 +57,16 @@ export default function SideMenu() {
           my projects
         </div>
         <br />
+        <div className="sidemenu-link">
+          <a
+            href="https://ieeexplore.ieee.org/document/10216577"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            my grad research
+          </a>
+        </div>
+        <br />
         <br />
         <div className="sidemenu-filler">==========</div>
         <br />
