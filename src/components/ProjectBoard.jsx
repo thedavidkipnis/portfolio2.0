@@ -17,6 +17,13 @@ export default function ProjectBoard() {
       "https://github.com/thedavidkipnis/alchemystic-platform",
     ],
     [
+      "dev tool playground",
+      "React (JS), Node.js",
+      "(work in progress) a hub of dev tools such as regex detector and file difference finder",
+      "https://thedavidkipnis.github.io/devtoolplayground/",
+      "https://github.com/thedavidkipnis/devtoolplayground",
+    ],
+    [
       "game-of-life",
       "JavaScript, HTML/CSS",
       "My take on Conway's game-of-life",
