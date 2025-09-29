@@ -43,7 +43,7 @@ export default function ProjectBoard() {
       "C++, SDL2, Visual Studio",
       "(w.i.p) 2D, DND-style roguelike being made for windows OS",
       "",
-      "https://github.com/thedavidkipnis/game-of-life",
+      "https://github.com/thedavidkipnis/Monolith_DND",
     ],
   ];
 
