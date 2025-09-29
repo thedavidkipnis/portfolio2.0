@@ -5,14 +5,13 @@ import "../styles/SideMenu.css";
 
 export default function SideMenu() {
   const { darkMode } = useTheme();
-  const { setDisplayedContentFlag } = useContent();
+  const { isSideMenuOpen, setIsSideMenuOpen, displayedContentFlag, setDisplayedContentFlag } = useContent();
 
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => setIsSideMenuOpen(!isSideMenuOpen);
 
   return (
-    <div className={`sidemenu-wrapper ${isOpen ? "open" : "closed"}`}>
-      <div className={`sidemenu-button-wrapper ${isOpen ? "open" : "closed"}`}>
+    <div className={`sidemenu-wrapper ${isSideMenuOpen ? "open" : "closed"}`}>
+      <div className={`sidemenu-button-wrapper ${isSideMenuOpen ? "open" : "closed"}`}>
         <img
           src={
             darkMode
@@ -20,45 +19,45 @@ export default function SideMenu() {
               : "/portfolio2.0/arrow_light.png"
           }
           alt="Toggle Menu"
-          className={`sidemenu-toggle-arrow ${isOpen ? "open" : "closed"}`}
+          className={`sidemenu-toggle-arrow ${isSideMenuOpen ? "open" : "closed"}`}
           onClick={toggleMenu}
         />
       </div>
       <div
         className="sidemenu-items"
         style={{
-          opacity: isOpen ? 1 : 0,
-          pointerEvents: isOpen ? "auto" : "none",
+          opacity: isSideMenuOpen ? 1 : 0,
+          pointerEvents: isSideMenuOpen ? "auto" : "none",
         }}
       >
         <div
           className="sidemenu-item"
           onClick={() => {
             setDisplayedContentFlag("DisplayBoard");
-            setIsOpen(!isOpen);
+            setIsSideMenuOpen(!isSideMenuOpen);
           }}
         >
-          about me
+          {displayedContentFlag == "DisplayBoard" ? "> about me" : "about me"}
         </div>
         <br />
         <div
           className="sidemenu-item"
           onClick={() => {
             setDisplayedContentFlag("ResumeBoard");
-            setIsOpen(!isOpen);
+            setIsSideMenuOpen(!isSideMenuOpen);
           }}
         >
-          my resume
+          {displayedContentFlag == "ResumeBoard" ? "> my resume" : "my resume"}
         </div>
         <br />
         <div
           className="sidemenu-item"
           onClick={() => {
             setDisplayedContentFlag("ProjectBoard");
-            setIsOpen(!isOpen);
+            setIsSideMenuOpen(!isSideMenuOpen);
           }}
         >
-          my projects
+          {displayedContentFlag == "ProjectBoard" ? "> my projects" : "my projects"}
         </div>
         <br />
         <div className="sidemenu-link">

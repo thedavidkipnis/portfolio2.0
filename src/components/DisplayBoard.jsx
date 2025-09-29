@@ -1,8 +1,13 @@
+import { useContent } from "../context/ContentProvider";
 import { useState, useEffect } from "react";
 import TypewriterText from "./TypewriterText";
 import "../styles/DisplayBoard.css";
 
 export default function DisplayBoard() {
+
+  const { isSideMenuOpen, setIsSideMenuOpen } = useContent();
+  const triggerSideMenu = () => {if (isSideMenuOpen) {setIsSideMenuOpen(false)} };
+
   const [word, setWord] = useState("> Searching for new word...");
   const [partOfSpeech, setPartOfSpeech] = useState("");
   const [wordDef, setWordDef] = useState("");
@@ -55,7 +60,7 @@ export default function DisplayBoard() {
   }, []);
 
   return (
-    <div className="displayboard-wrapper">
+    <div className="displayboard-wrapper" onClick={triggerSideMenu}>
       <h1 className="displayboard-header">
         <TypewriterText text={"hi, i'm david kipnis."} />
       </h1>
@@ -74,6 +79,9 @@ export default function DisplayBoard() {
       )}
 
       <div className="displayboard-wordoftheday-wrapper">
+        <br />
+        <br />
+        <TypewriterText text={"---------------"} typingSpeed={50} />
         <TypewriterText text={`${word}${partOfSpeech}`} />
         <TypewriterText text={wordDef} />
       </div>

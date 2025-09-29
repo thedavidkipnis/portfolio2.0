@@ -1,7 +1,12 @@
+import { useContent } from "../context/ContentProvider";
 import TypewriterText from "./TypewriterText";
 import "../styles/ResumeBoard.css";
 
 export default function ResumeBoard() {
+
+  const { isSideMenuOpen, setIsSideMenuOpen } = useContent();
+  const triggerSideMenu = () => {if (isSideMenuOpen) {setIsSideMenuOpen(false)} };
+
   const textArray = [
     "> david kipnis",
     "> thedavidkipnis@gmail.com",
@@ -75,7 +80,7 @@ export default function ResumeBoard() {
   ];
 
   return (
-    <div className="resumeboard-wrapper">
+    <div className="resumeboard-wrapper" onClick={triggerSideMenu}>
       {textArray.map((text, index) =>
         text.includes("=") ? (
           <div key={index}>

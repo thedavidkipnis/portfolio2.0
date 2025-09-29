@@ -21,12 +21,12 @@ export default function Navbar() {
         >
           <div className="navbar-darkmode-button-image-wrapper">
             <img
-              src="/portfolio2.0/lightmode.png"
+              src="/portfolio2.0/lightmode2.png"
               alt="Light Mode"
               className={`image ${darkMode ? "visible" : "hidden"}`}
             />
             <img
-              src="/portfolio2.0/darkmode.png"
+              src="/portfolio2.0/darkmode2.png"
               alt="Dark Mode"
               className={`image ${darkMode ? "hidden" : "visible"}`}
             />

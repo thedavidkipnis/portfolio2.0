@@ -1,6 +1,11 @@
+import { useContent } from "../context/ContentProvider";
 import "../styles/ProjectBoard.css";
 
 export default function ProjectBoard() {
+
+  const { isSideMenuOpen, setIsSideMenuOpen } = useContent();
+  const triggerSideMenu = () => {if (isSideMenuOpen) {setIsSideMenuOpen(false)} };
+
   const projects = [
     [
       "tondo",
@@ -17,23 +22,30 @@ export default function ProjectBoard() {
       "https://github.com/thedavidkipnis/alchemystic-platform",
     ],
     [
-      "dev tool playground",
-      "React (JS), Node.js",
-      "(work in progress) a hub of dev tools such as regex detector and file difference finder",
-      "https://thedavidkipnis.github.io/devtoolplayground/",
-      "https://github.com/thedavidkipnis/devtoolplayground",
-    ],
-    [
       "game-of-life",
       "JavaScript, HTML/CSS",
       "My take on Conway's game-of-life",
       "https://thedavidkipnis.github.io/game-of-life/",
       "https://github.com/thedavidkipnis/game-of-life",
     ],
+    [
+      "dev tool playground",
+      "React (JS), Node.js",
+      "(w.i.p) a hub of dev tools such as regex detector and case converter",
+      "https://thedavidkipnis.github.io/devtoolplayground/",
+      "https://github.com/thedavidkipnis/devtoolplayground",
+    ],
+    [
+      "MONOLITH",
+      "C++, SDL2, Visual Studio",
+      "(w.i.p) 2D, DND-style roguelike being made for windows OS",
+      "",
+      "https://github.com/thedavidkipnis/game-of-life",
+    ],
   ];
 
   return (
-    <div className="projectboard-wrapper">
+    <div className="projectboard-wrapper" onClick={triggerSideMenu}>
       <div className="projectboard-grid">
         {projects.map((project, index) => (
           <div key={index} className="projectboard-box">
@@ -45,13 +57,13 @@ export default function ProjectBoard() {
               {project[2]}
             </div>
             <div className="projectboard-footer">
-              <a href={project[3]} target="_blank" rel="noopener noreferrer">
+              {project[3].length > 1 && <a href={project[3]} target="_blank" rel="noopener noreferrer">
                 link to app
-              </a>
-              <span>|</span>
-              <a href={project[4]} target="_blank" rel="noopener noreferrer">
+              </a>}
+              {project[3].length > 1 && <span>|</span>}
+              {project[4].length > 1 && <a href={project[4]} target="_blank" rel="noopener noreferrer">
                 link to code
-              </a>
+              </a>}
             </div>
           </div>
         ))}
