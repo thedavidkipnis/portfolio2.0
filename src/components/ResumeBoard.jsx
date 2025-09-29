@@ -3,9 +3,12 @@ import TypewriterText from "./TypewriterText";
 import "../styles/ResumeBoard.css";
 
 export default function ResumeBoard() {
-
   const { isSideMenuOpen, setIsSideMenuOpen } = useContent();
-  const triggerSideMenu = () => {if (isSideMenuOpen) {setIsSideMenuOpen(false)} };
+  const triggerSideMenu = () => {
+    if (isSideMenuOpen) {
+      setIsSideMenuOpen(false);
+    }
+  };
 
   const textArray = [
     "> david kipnis",

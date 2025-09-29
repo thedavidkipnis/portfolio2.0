@@ -4,9 +4,12 @@ import TypewriterText from "./TypewriterText";
 import "../styles/DisplayBoard.css";
 
 export default function DisplayBoard() {
-
   const { isSideMenuOpen, setIsSideMenuOpen } = useContent();
-  const triggerSideMenu = () => {if (isSideMenuOpen) {setIsSideMenuOpen(false)} };
+  const triggerSideMenu = () => {
+    if (isSideMenuOpen) {
+      setIsSideMenuOpen(false);
+    }
+  };
 
   const [word, setWord] = useState("> Searching for new word...");
   const [partOfSpeech, setPartOfSpeech] = useState("");

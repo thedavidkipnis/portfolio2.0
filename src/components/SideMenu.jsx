@@ -1,17 +1,23 @@
-import React, { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
 import { useContent } from "../context/ContentProvider";
 import "../styles/SideMenu.css";
 
 export default function SideMenu() {
   const { darkMode } = useTheme();
-  const { isSideMenuOpen, setIsSideMenuOpen, displayedContentFlag, setDisplayedContentFlag } = useContent();
+  const {
+    isSideMenuOpen,
+    setIsSideMenuOpen,
+    displayedContentFlag,
+    setDisplayedContentFlag,
+  } = useContent();
 
   const toggleMenu = () => setIsSideMenuOpen(!isSideMenuOpen);
 
   return (
     <div className={`sidemenu-wrapper ${isSideMenuOpen ? "open" : "closed"}`}>
-      <div className={`sidemenu-button-wrapper ${isSideMenuOpen ? "open" : "closed"}`}>
+      <div
+        className={`sidemenu-button-wrapper ${isSideMenuOpen ? "open" : "closed"}`}
+      >
         <img
           src={
             darkMode
@@ -57,7 +63,9 @@ export default function SideMenu() {
             setIsSideMenuOpen(!isSideMenuOpen);
           }}
         >
-          {displayedContentFlag == "ProjectBoard" ? "> my projects" : "my projects"}
+          {displayedContentFlag == "ProjectBoard"
+            ? "> my projects"
+            : "my projects"}
         </div>
         <br />
         <div className="sidemenu-link">

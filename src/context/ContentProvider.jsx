@@ -10,7 +10,8 @@ const ContentContext = createContext();
 export function ContentProvider({ children }) {
   const [contentTitle, setContentTitle] = useState("about_me.txt");
   const [displayedContent, setDisplayedContent] = useState(<DisplayBoard />);
-  const [displayedContentFlag, setDisplayedContentFlag] = useState("DisplayBoard");
+  const [displayedContentFlag, setDisplayedContentFlag] =
+    useState("DisplayBoard");
 
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
 
@@ -40,8 +41,8 @@ export function ContentProvider({ children }) {
         setContentTitle,
         displayedContentFlag,
         setDisplayedContentFlag,
-        isSideMenuOpen, 
-        setIsSideMenuOpen
+        isSideMenuOpen,
+        setIsSideMenuOpen,
       }}
     >
       {children}

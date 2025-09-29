@@ -2,9 +2,12 @@ import { useContent } from "../context/ContentProvider";
 import "../styles/ProjectBoard.css";
 
 export default function ProjectBoard() {
-
   const { isSideMenuOpen, setIsSideMenuOpen } = useContent();
-  const triggerSideMenu = () => {if (isSideMenuOpen) {setIsSideMenuOpen(false)} };
+  const triggerSideMenu = () => {
+    if (isSideMenuOpen) {
+      setIsSideMenuOpen(false);
+    }
+  };
 
   const projects = [
     [
@@ -57,13 +60,17 @@ export default function ProjectBoard() {
               {project[2]}
             </div>
             <div className="projectboard-footer">
-              {project[3].length > 1 && <a href={project[3]} target="_blank" rel="noopener noreferrer">
-                link to app
-              </a>}
+              {project[3].length > 1 && (
+                <a href={project[3]} target="_blank" rel="noopener noreferrer">
+                  link to app
+                </a>
+              )}
               {project[3].length > 1 && <span>|</span>}
-              {project[4].length > 1 && <a href={project[4]} target="_blank" rel="noopener noreferrer">
-                link to code
-              </a>}
+              {project[4].length > 1 && (
+                <a href={project[4]} target="_blank" rel="noopener noreferrer">
+                  link to code
+                </a>
+              )}
             </div>
           </div>
         ))}

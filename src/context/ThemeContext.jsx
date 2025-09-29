@@ -17,7 +17,6 @@ export function ThemeProvider({ children }) {
     return true;
   });
 
-
   // Keep your <body> class toggling here
   useEffect(() => {
     document.body.classList.toggle("dark-mode", darkMode);
